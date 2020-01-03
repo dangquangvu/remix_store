@@ -1,5 +1,5 @@
 <template>
-  <v-app dark class="ms_main_wrapper">
+  <v-app  class="ms_main_wrapper">
     <!-- navigate -->
     <v-navigation-drawer
       v-model="drawer"
@@ -20,11 +20,11 @@
           exact
         >
           <li>
-              <a >
+             <a class="d-inline-flex">
                   <span class="nav_icon">
-                    <span v-bind:class="item.icon"></span>
+                    <span v-bind:class="item.icon" class="d-inline-flex flex-row"></span>
                   </span>
-                  <span id="nav_text" class="color">
+                  <span id="nav_text" class="color pl-3 ">
                     {{item.title}}
                   </span>
               </a>
