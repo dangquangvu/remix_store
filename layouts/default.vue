@@ -1,5 +1,5 @@
 <template>
-  <v-app >
+  <v-app dark>
     <v-navigation-drawer
       v-model="drawer"
       :mini-variant="miniVariant"
@@ -44,13 +44,7 @@
       >
         <v-icon>mdi-application</v-icon>
       </v-btn>
-      <v-btn
-        icon
-        @click.stop="fixed = !fixed"
-      >
-        <v-icon>mdi-minus</v-icon>
-      </v-btn>
-      <v-toolbar-title>{{title||capitalize}}</v-toolbar-title>
+
       <v-spacer />
 
     </v-app-bar>
@@ -68,18 +62,12 @@
     </v-footer>
   </v-app>
 </template>
+<style lang="css">
+@import url('~/assets/css/main.css');
 
-<style>
-  .back{
-      background-color : #14182a !important;
-  }
-  .navigate{
-      background-color : #14182a !important;
-  }
 </style>
-<style >
-@import "~/assets/css/style.css";
-</style>
+
+
 <script>
 export default {
   data () {

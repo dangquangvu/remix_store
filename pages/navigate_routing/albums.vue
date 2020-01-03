@@ -18,3 +18,6 @@
   </v-layout>
 </template>
 
+<style lang="css" >
+@import url('~/assets/css/main.css');
+</style>

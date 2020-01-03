@@ -24,7 +24,11 @@ module.exports = {
         link: [{
             rel: "icon",
             type: "image/x-icon",
-            href: "/favicon.ico"
+            href: "/favicon.ico",
+            css: [
+                "~/assets/css/main.css",
+                { src: "~/assets/css/main.css", lang: "css" }
+            ]
         }]
     },
     /*
@@ -33,15 +37,7 @@ module.exports = {
     loading: {
         color: "#fff"
     },
-    /*
-     ** Global CSS
-     */
-    css: [
-        "~/assets/css/style.css",
-        "~/assets/css/font-awesome.min.css",
-        "~/assets/css/bootstrap.css",
-        "~/assets/css/fonts.css"
-    ],
+
     /*
      ** Plugins to load before mounting the App
      */
@@ -59,22 +55,23 @@ module.exports = {
      ** https://github.com/nuxt-community/vuetify-module
      */
     vuetify: {
-        customVariables: ["~/assets/variables.scss"],
         theme: {
-            dark: true,
+            primary: true,
             themes: {
-                dark: {
-                    primary: colors.blue.darken2,
-                    accent: colors.grey.darken3,
-                    secondary: colors.amber.darken3,
-                    info: colors.teal.lighten1,
-                    warning: colors.amber.base,
-                    error: colors.deepOrange.accent4,
-                    success: colors.green.accent3
-                }
+                primary: colors.blue.darken2,
+                accent: colors.grey.darken3,
+                secondary: colors.amber.darken3,
+                info: colors.teal.lighten1,
+                warning: colors.amber.base,
+                error: colors.deepOrange.accent4,
+                success: colors.green.accent3
             }
         }
     },
+    /*
+     ** Global CSS
+     */
+    css: ["~/assets/css/main.css"],
     /*
      ** Build configuration
      */
@@ -82,16 +79,6 @@ module.exports = {
         /*
          ** You can extend webpack config here
          */
-        extend(config, ctx) {},
-        extractCSS: {
-            allChunks: true
-        }
-    },
-    render: {
-        bundleRenderer: {
-            shouldPreload: (file, type) => {
-                return ["script", "style", "font"].includes(type);
-            }
-        }
+        extend(config, ctx) {}
     }
 };
