@@ -77,7 +77,7 @@
       </v-container>
     </v-content>
     <!-- footer -->
-    <v-footer :fixed="fixed" app style="height: 70px, p-0">
+    <v-footer :fixed="fixed" app style=" p-0">
       <div class="ms_player_wrapper">
         <div class="ms_player_close">
           <i class="fa fa-angle-up" aria-hidden="true"></i>
