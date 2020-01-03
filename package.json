@@ -16,6 +16,7 @@
     "express": "^4.16.4"
   },
   "devDependencies": {
+    "@mdi/font": "^4.7.95",
     "@nuxtjs/vuetify": "^1.0.0",
     "nodemon": "^1.18.9",
     "stylus": "^0.54.7",
