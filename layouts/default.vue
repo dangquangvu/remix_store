@@ -1,5 +1,5 @@
 <template>
-  <v-app  class="ms_main_wrapper">
+  <v-app  class="ms_main_wrapper m-0">
     <!-- navigate -->
     <v-navigation-drawer
       v-model="drawer"
@@ -7,11 +7,11 @@
       :clipped="clipped"
       fixed
       app
-      class="navigate ms_nav_wrapper"
+      class="navigate ms_nav_wrapper pt-0 m-0"
       width='200px'
     >
-      <v-list>
-         <ul>
+      <v-list class="m-0">
+         <ul class="pl-0">
         <v-list-item
           v-for="(item, i) in items"
           :key="i"
@@ -20,11 +20,11 @@
           exact
         >
           <li>
-             <a class="d-inline-flex">
+             <a class="d-inline-flex pl-0">
                   <span class="nav_icon">
                     <span v-bind:class="item.icon" class="d-inline-flex flex-row"></span>
                   </span>
-                  <span id="nav_text" class="color pl-3 ">
+                  <span id="nav_text" class="color pl-3">
                     {{item.title}}
                   </span>
               </a>
