@@ -1,15 +1,13 @@
 <template>
   <v-app dark class="ms_main_wrapper">
     <!-- navigate -->
-
-    <div class="ms_nav_wrapper">
     <v-navigation-drawer
       v-model="drawer"
       :mini-variant="miniVariant"
       :clipped="clipped"
       fixed
       app
-      class="navigate ms_sidemenu_wrapper"
+      class="navigate ms_nav_wrapper"
       width='200px'
     >
       <v-list>
@@ -35,7 +33,6 @@
          </ul>
       </v-list>
     </v-navigation-drawer>
-    </div>
     <!-- sidebar -->
     <v-app-bar
       :clipped-left="clipped"
