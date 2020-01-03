@@ -77,7 +77,9 @@
       background-color : #14182a !important;
   }
 </style>
-
+<style >
+@import "~/assets/css/style.css";
+</style>
 <script>
 export default {
   data () {

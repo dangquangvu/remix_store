@@ -1,42 +1,47 @@
-const colors = require('vuetify/es5/util/colors').default
+const colors = require("vuetify/es5/util/colors").default;
 
 module.exports = {
-    mode: 'spa',
+    mode: "spa",
     /*
      ** Headers of the page
      */
     head: {
-        titleTemplate: '%s - ' + process.env.npm_package_name,
-        title: process.env.npm_package_name || '',
+        titleTemplate: "%s - " + process.env.npm_package_name,
+        title: process.env.npm_package_name || "",
         meta: [{
-                charset: 'utf-8'
+                charset: "utf-8"
             },
             {
-                name: 'viewport',
-                content: 'width=device-width, initial-scale=1'
+                name: "viewport",
+                content: "width=device-width, initial-scale=1"
             },
             {
-                hid: 'description',
-                name: 'description',
-                content: process.env.npm_package_description || ''
+                hid: "description",
+                name: "description",
+                content: process.env.npm_package_description || ""
             }
         ],
         link: [{
-            rel: 'icon',
-            type: 'image/x-icon',
-            href: '/favicon.ico'
+            rel: "icon",
+            type: "image/x-icon",
+            href: "/favicon.ico"
         }]
     },
     /*
      ** Customize the progress-bar color
      */
     loading: {
-        color: '#fff'
+        color: "#fff"
     },
     /*
      ** Global CSS
      */
-    css: [],
+    css: [
+        "~/assets/css/style.css",
+        "~/assets/css/font-awesome.min.css",
+        "~/assets/css/bootstrap.css",
+        "~/assets/css/fonts.css"
+    ],
     /*
      ** Plugins to load before mounting the App
      */
@@ -44,9 +49,7 @@ module.exports = {
     /*
      ** Nuxt.js dev-modules
      */
-    buildModules: [
-        '@nuxtjs/vuetify',
-    ],
+    buildModules: ["@nuxtjs/vuetify"],
     /*
      ** Nuxt.js modules
      */
@@ -56,7 +59,7 @@ module.exports = {
      ** https://github.com/nuxt-community/vuetify-module
      */
     vuetify: {
-        customVariables: ['~/assets/variables.scss'],
+        customVariables: ["~/assets/variables.scss"],
         theme: {
             dark: true,
             themes: {
@@ -84,5 +87,11 @@ module.exports = {
             allChunks: true
         }
     },
-
-}
+    render: {
+        bundleRenderer: {
+            shouldPreload: (file, type) => {
+                return ["script", "style", "font"].includes(type);
+            }
+        }
+    }
+};
