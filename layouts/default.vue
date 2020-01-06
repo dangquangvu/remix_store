@@ -1,15 +1,16 @@
 <template>
-  <v-app class="ms_main_wrapper m-0">
+  <v-app class="ms_main_wrapper m-0" id="v_app">
     <!-- navigate -->
 
     <v-navigation-drawer
       v-model="drawer"
       :mini-variant="miniVariant"
       :clipped="clipped"
-      fixed
+      :fixed="fixed"
       app
       class="navigate ms_nav_wrapper p-0 m-0"
       width="200px"
+      id="nav_css"
     >
       <div class="ms_logo_inner">
         <div class="ms_logo">
@@ -24,7 +25,7 @@
         </div>
       </div>
       <v-list class="m-0 p-0">
-        <ul class="p-0">
+        <ul class="p-0" id="list_router">
           <v-list-item
             v-for="(item, i) in items"
             :key="i"
@@ -32,7 +33,6 @@
             router
             exact
           >
-            <li class="p-0 m-0">
               <a class="d-inline-flex pl-0 pr-0">
                 <span class="nav_icon">
                   <span
@@ -44,7 +44,6 @@
                   {{ item.title }}
                 </span>
               </a>
-            </li>
           </v-list-item>
         </ul>
       </v-list>
@@ -260,6 +259,15 @@ header {
   background-color: #1b2039 !important;
   color: #fff;
 }
+#nav_css{
+  position:fixed;
+}
+#list_router a:hover,
+#list_router a:active {
+  background-color: #2cc8e5;
+  background-position: 0px 0px;
+  color: #ffffff;
+}
 .color_fff {
   color: #fff !important;
 }
@@ -267,6 +275,7 @@ header {
   margin: 0;
   color: white !important;
   background: #14182a !important;
+  position: fixed;
 }
 .color {
   font-family: "Josefin Sans", sans-serif !important;

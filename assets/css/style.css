@@ -529,17 +529,19 @@ body.loaded .ms_loader {
     display: none;
 }
 
-.ms_nav_wrapper ul li a:hover,
+
+/* .ms_nav_wrapper ul li a:hover,
 .ms_nav_wrapper ul li a.active {
     background-color: #2cc8e5;
     background-position: 0px 0px;
     color: #ffffff;
-}
+} */
 
-.ms_nav_wrapper ul li a:hover:after,
+
+/* .ms_nav_wrapper ul li a:hover:after,
 .ms_nav_wrapper ul li a.active:after {
     background-color: #3bc8e7;
-}
+} */
 
 .ms_nav_wrapper ul li a:hover span.nav_icon>.icon,
 .ms_nav_wrapper ul li a.active span.nav_icon>.icon {
