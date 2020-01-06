@@ -13,40 +13,19 @@
       </p>
       <span class="icon icon_albums"></span>
       <div class="list_router">
-        <v-list-item
-          v-for="(item, i) in items"
-          :key="i"
-          :to="item.to"
-          :id="item.title"
-          router
-          exact
-        >
-          <li class="p-0 m-0">
-            <a class="d-inline-flex pl-0 pr-0">
-              <span class="nav_icon">
-                <span
-                  v-bind:class="item.icon"
-                  class="d-inline-flex flex-row"
-                ></span>
-              </span>
-              <span id="text" class="color pl-3">
-                {{ item.title }}
-              </span>
-            </a>
-          </li>
-        </v-list-item>
+
       </div>
     </v-flex>
   </v-layout>
 </template>
 <style lang="css" scope>
 /* @import url("~/assets/css/main.css"); */
-@import url("~/assets/css/fonts.css");
+/* @import url("~/assets/css/fonts.css"); */
 /* @import url("~/assets/css/style.css"); */
-@import url("~/assets/css/font-awesome.min.css");
+/* @import url("~/assets/css/font-awesome.min.css"); */
 /* @import url("~/assets/css/bootstrap.css"); */
 
-.icon {
+/* .icon {
   width: 25px;
   height: 25px;
   display: inline-block;
@@ -57,7 +36,7 @@
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   display: inline-block;
-}
+} */
 .list_router a:hover,
 .list_router a:active {
   background-color: #2cc8e5;

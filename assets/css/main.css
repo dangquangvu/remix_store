@@ -1,3 +1,14 @@
+body {
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif !important;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #777777 !important;
+    background-color: #14182a !important;
+}
+
+
 /*====Normal Css Start====*/
 
 h1,
@@ -36,6 +47,117 @@ button:focus {
     outline: none;
 }
 
-.demo {
-    color: red
+header {
+    background-color: #1b2039 !important;
+    color: #fff;
+}
+
+
+/* #list_router a:hover,
+#list_router a:active {
+    background-color: #2cc8e5;
+    background-position: 0px 0px;
+    color: #ffffff;
+} */
+
+.color_fff {
+    color: #fff !important;
+}
+
+.navigate {
+    margin: 0;
+    color: white !important;
+    background: #14182a !important;
+    position: fixed;
+}
+
+.color {
+    font-family: "Josefin Sans", sans-serif !important;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: white !important;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.sidebar {
+    padding: 0px;
+    width: 100% - 200px;
+    background-color: #1b2039;
+    position: fixed;
+}
+
+header {
+    background-color: #1b2039 !important;
+    color: #fff;
+}
+
+#nav_css {
+    position: fixed;
+}
+
+
+/* #list_router a:hover,
+#list_router a:active {
+    background-color: #2cc8e5;
+    background-position: 0px 0px;
+    color: #ffffff;
+} */
+
+.color_fff {
+    color: #fff !important;
+}
+
+.navigate {
+    margin: 0;
+    color: white !important;
+    background: #14182a !important;
+    position: fixed;
+}
+
+.color {
+    font-family: "Josefin Sans", sans-serif !important;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: white !important;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.sidebar {
+    padding: 0px;
+    width: 100% - 200px;
+    background-color: #1b2039;
+    position: fixed;
+}
+
+#list_router a.v-list-item--active,
+.ms_nav_wrapper ul a.v-list-item--active:after {
+    background-color: #2cc8e5 !important;
+}
+
+#list_router a.v-list-item--active li a span.nav_icon>span {
+    color: #fff;
+}
+
+.ms_nav_wrapper ul a:hover {
+    background-color: #2cc8e5;
+    background-position: 0px 0px;
+    color: #ffffff;
+}
+
+
+/* .ms_nav_wrapper ul a:hover:after,
+.ms_nav_wrapper ul a.v-list-item--active:after {
+    background-color: #3bc8e7;
+} */
+
+.a_control {
+    height: 100%;
 }
