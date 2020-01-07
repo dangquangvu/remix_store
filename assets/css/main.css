@@ -161,3 +161,23 @@ a:hover {
 .a_control {
     height: 100%;
 }
+
+.sidebar .search_header {
+    max-width: 100%;
+    position: relative;
+    display: flex;
+    display: inline-block;
+    width: 100%;
+    float: left;
+}
+
+.sidebar .search_header .form-control {
+    display: inline-block;
+    height: 40px;
+    padding: 0px 20px;
+    font-size: 15px;
+    line-height: 45px;
+    color: #777;
+    border: none;
+    border-radius: 5px;
+}

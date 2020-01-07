@@ -55,16 +55,55 @@
     </template>
     <!-- sidebar -->
     <v-app-bar :clipped-left="clipped" fixed app class="sidebar">
-      <v-container fluid class="ma-0 pa-0 fill-height p-md-4">
-        <v-row>
-          <v-app-bar-nav-icon
+      <v-container fluid class="ma-0 pa-0 fill-height p-md-4 px-0">
+        <v-layout row class="d-inline-flex">
+          <v-flex md1 xs1 class="">
+            <v-app-bar-nav-icon
             @click.stop="drawer = !drawer"
-            class="color_fff"
+            class="color_fff mr-2 justify-center"
           />
-          <v-spacer />
-        </v-row>
+          </v-flex>
+          <v-flex md5 xs5 class="pt-2">
+            <div class="search_header">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Search Music Here.."
+              />
+              <span class="search_icon">
+                <img src="~/assets/images/svg/search.svg" alt="" />
+              </span>
+            </div>
+          </v-flex>
+          <v-flex md4 xs3 class="pt-2 d-flex flex-row-reverse">
+            <div class="ms_top_right">
+              <div class="ms_top_lang">
+                <span data-toggle="modal" data-target="#lang_modal"
+                  >languages <img src="~/assets/images/svg/lang.svg" alt=""
+                /></span>
+              </div>
+              <div class="ms_top_btn">
+                <a
+                  href="javascript:;"
+                  class="ms_btn reg_btn"
+                  data-toggle="modal"
+                  data-target="#myModal"
+                  ><span>register</span></a
+                >
+                <a
+                  href="javascript:;"
+                  class="ms_btn login_btn"
+                  data-toggle="modal"
+                  data-target="#myModal1"
+                  ><span>login</span></a
+                >
+              </div>
+            </div>
+          </v-flex>
+        </v-layout>
       </v-container>
     </v-app-bar>
+    <!-- <v-spacer /> -->
     <!-- content -->
     <v-content>
       <v-container>
@@ -163,14 +202,7 @@ export default {
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: "Vuetify.js",
-      filters: {
-        capitalize: function(value) {
-          if (!value) return "";
-          value = value.toString();
-          return value.charAt(0).toUpperCase() + value.slice(1);
-        }
-      }
+      title: "Vuetify.js"
     };
   }
 };
